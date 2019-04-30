@@ -16,7 +16,6 @@
 @interface FSCalendarStickyHeader ()
 
 @property (weak  , nonatomic) UIView  *contentView;
-@property (weak  , nonatomic) UIView  *bottomBorder;
 @property (weak  , nonatomic) FSCalendarWeekdayView *weekdayView;
 
 @end

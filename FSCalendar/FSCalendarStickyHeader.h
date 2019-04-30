@@ -18,6 +18,8 @@
 
 @property (strong, nonatomic) NSDate *month;
 
+@property (weak, nonatomic) UIView *bottomBorder;
+
 - (void)configureAppearance;
 
 @end

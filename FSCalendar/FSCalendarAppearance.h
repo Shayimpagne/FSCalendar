@@ -194,6 +194,11 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
 @property (assign, nonatomic) CGFloat borderRadius;
 
 /**
+ * Separator hidden state for bottom border view in headers
+ */
+@property (assign, nonatomic) BOOL isBottomBorderHidden;
+
+/**
  * The case options manage the case of month label and weekday symbols.
  *
  * @see FSCalendarCaseOptions
