@@ -145,10 +145,10 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 }
 
 - (void)initialize
-{   
+{
+    
     _appearance = [[FSCalendarAppearance alloc] init];
     _appearance.calendar = self;
-    _appearance.isBottomBorderHidden = NO;
     
     _gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     _formatter = [[NSDateFormatter alloc] init];
@@ -437,7 +437,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
             FSCalendarStickyHeader *stickyHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
             stickyHeader.calendar = self;
-            stickyHeader.bottomBorder.hidden = self.appearance.isBottomBorderHidden;
+            stickyHeader.bottomBorder.hidden = self.isBottomBorderHidden;
             stickyHeader.month = [self.gregorian dateByAddingUnit:NSCalendarUnitMonth value:indexPath.section toDate:[self.gregorian fs_firstDayOfMonth:_minimumDate] options:0];
             self.visibleSectionHeaders[indexPath] = stickyHeader;
             [stickyHeader setNeedsLayout];

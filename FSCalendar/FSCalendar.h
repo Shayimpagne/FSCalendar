@@ -243,6 +243,11 @@ IB_DESIGNABLE
 @interface FSCalendar : UIView
 
 /**
+ * Set collection view bottom border hidden
+ */
+@property (assign, nonatomic) BOOL isBottomBorderHidden;
+
+/**
  * The object that acts as the delegate of the calendar.
  */
 @property (weak, nonatomic) IBOutlet id<FSCalendarDelegate> delegate;
