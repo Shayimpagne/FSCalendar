@@ -104,11 +104,6 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
 @property (strong, nonatomic) UIColor  *headerTitleColor;
 
 /**
- * The alignment of header text.
- */
-@property (assign, nonatomic) NSTextAlignment headerTitleLabelAlignment;
-
-/**
  * The date format of the month header.
  */
 @property (strong, nonatomic) NSString *headerDateFormat;
